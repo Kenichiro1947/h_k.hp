@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>テイクアウト</title>
+      <style>
+          /*共通部分*/
+          html {
+              font-size: 100%;
+          }
+          body {
+              font-family: "Yu Gosic Medium", "游ゴシック Medium", "游ゴシック体", "ヒラギノ角ゴ Pro W3, sans-serif";
+              line-height: 1.7;
+              color: #432;
+          }
+          a {
+              text-decoration: none;
+          }
+          img {
+              max-width: 100%;
+          }
+          /*ヘッダー*/
+          .logo {
+              width: 210px;
+              margin-top: 14px;
+              font-family: HG正楷書体-PRO;
+              color: #fff;
+          }
+          .main-nav {
+              display: flex;
+              font-size: 1.25rem;
+              text-transform: uppercase;
+              margin-top: 34px;
+              list-style: none;
+              padding: 5px;
+              padding-right: 35px;
+              border-bottom: 1px solid;
+              border-top: 1px solid;
+              color: #fff;
+          }
+          .main-nav li {
+              margin-left: 36px;
+          }
+          .main-nav a {
+              color: #fff;
+          }
+          .main-nav a:hover {
+              color: rgb(128, 161, 75);
+          }
+          .header {
+              display: flex;
+              justify-content: space-between;
+          }
+          .wrapper {
+              max-width: 1100px;
+              margin: 0 auto;
+              padding: 0 4%;
+          }
+          h1 {
+              color: fff;
+          }
+          .home {
+              color: #fff;
+          }
+          .home:hover {
+              color: rgb(128, 161, 75);
+          }
+
+          .min {
+              text-align: center;
+              margin-bottom: 120px;
+          }
+          .item {
+              text-align: center;
+          }
+         
+          /*大きな背景画像*/
+          .big-bg {
+              background-size: cover;
+              background-blend-mode:multiply;
+              background-color: rgb(217, 238, 212);
+          }
+          #menu {
+              background-image: url(background_img/doghouse.jpg);
+              min-height: 100vh;
+          }
+          .menu-content {
+              max-width: 560px;
+              margin-top: 10%;
+          }
+          .page-title {
+              color: rgb(128, 161, 75);
+              font-weight: bolder;
+              font-size: 5.00rem;
+          }
+          .menu-content {
+              color: #fff;
+          }
+          .menu-content .page-title {
+              text-align: center;
+          }
+          .menu-content p {
+              font-size: 1.125rem;
+              margin: 10px 0 0;
+          }
+          /*メニュー写真*/
+          .grid {
+              display: grid;
+              gap: 26px;
+              grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+              margin-top: 6%;
+              margin-bottom: 50px;
+          }
+          
+          .menu-table {
+              text-align: center;
+              margin-bottom: 200px;
+              display: block;  
+          }
+          .menu-index {
+              font-size: 1.375rem;
+              display: block;
+              color: rgb(128, 161, 75);
+    
+          }
+          .menu-index span {
+              font-size: 1.25rem;
+              color: rgb(128, 161, 75);
+          }
+          .plice1,
+          .plice2 {
+              font-size: 1.2rem;
+              text-align: center;
+          }
+          .plice-in {
+              text-align: center;
+              display: inline-block;
+              border: solid 2px rgb(128, 161, 75);
+              padding: 30px;
+              margin: 0;
+              margin-bottom: 50px;
+          }
+
+        /*フッター*/
+        footer {
+            background-color: #432;
+            text-align: center;
+            padding: 26px 0;
+        }
+        footer p {
+            color: #fff;
+            font-size: 0.875rem;
+        }
+
+       /*モバイル版*/
+       @media (max-width: 600px) {
+             .page-title {
+                  font-size: 2.5rem;
+              }
+              /*HEADER*/
+              .main-nav {
+                  font-size: 1rem;
+                  margin-top: 10px;
+              }
+              .main-nav li {
+                  margin: 0 20px;
+              }
+              /*HOME*/
+              .home-content {
+                  margin-top: 20%;
+              }
+              .page-header {
+                  flex-direction: column;
+                  align-items: center;
+              }
+              /*NEWS*/
+              .news-contents {
+                  flex-direction: column;
+              }
+              .article,
+              aside {
+                  width: 100%;
+              }
+              #news .page-title {
+                  margin-top: 30px;
+              }
+              aside {
+                  margin-top: 60px;
+              }
+              .post-info {
+                  margin-bottom: 30px;
+              }
+              .post-number {
+                  width: 70px;
+                  height: 70px;
+                  font-size: 1rem;
+              }
+              .post-number span {
+                  font-size: 0.875rem;
+                  padding-top: 2px;
+              }
+              .post-title {
+                  font-size: 1.375rem;
+              }
+              .post-cat {
+                  font-size: 0.875rem;
+                  margin-top: 10px;
+              }
+              .post-title,
+              .post-cat {
+                  margin-left: 80px;
+              }
+              /*MENU*/
+              .menu-content {
+                  margin-top: 20%;
+              }
+               
+          }
+
+
+     </style>
+
+    </head>
+    <body>
+      <div id="menu" class="big-bg">
+        <header class="header wrapper">
+          <h1 class="logo"><a href="index.html" class="home">中國菜館林</a></h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="menu_course.html">お品書き</a></li>
+                    <li><a href="take-out.html">テイクアウト</a></li>
+                    <li><a href="information_store.html">店舗情報</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="menu-content wrapper">
+            <h2 class="page-title">テイクアウトMENU</h2>
+            <p>当店の人気メニューがご家庭でお楽しみいただけます。食材にこだわりぬいた贅沢な一品をどうぞお召し上がりください。
+                
+            </p>
+        </div>
+      </div>
+
+      <div class="wrapper grid">
+          <div class="item">
+            <img src="take-out_img/bento.jpg" alt="写真">
+            <p>お弁当</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/toutiitame.jpg" alt="写真">
+            <p>魚と野菜のトウチ炒め</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/siitakenonikudume.jpg" alt="写真">
+            <p>椎茸の肉詰めと野菜の炒め物</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/bi-hun.jpg" alt="写真">
+            <p>五目焼きビーフン</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/amazunonikudango.jpg" alt="写真">
+            <p>甘酢ソースの肉団子</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/subuta.jpg" alt="写真">
+            <p>特製黒酢のスブタ</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/ma-bo-douhu.jpg" alt="写真">
+            <p>麻婆豆腐</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/yu-rinti-.jpg" alt="写真">
+            <p>鶏モモ肉の揚げ物　香味ソース</p>
+          </div><div class="item">
+            <img src="take-out_img/remondori.jpg" alt="写真">
+            <p>鶏胸肉の揚げ物　レモンソース</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/syu-mai.jpg" alt="写真">
+            <p>シュウマイ</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/gomadango.jpg" alt="写真">
+            <p>ゴマ団子</p>
+          </div>
+          <div class="item">
+            <img src="take-out_img/momoman.jpg" alt="写真">
+            <p>桃饅頭</p>
+          </div>
+      </div>
+      <p class="min">※商品写真は一部掲載となっております<br>
+        すべてのメニューは下記に記載しております
+     </p>
+
+
+      <div class="menu-table">
+        <p class="menu-index">テイクアウトメニュー<br><span>(価格は税込み価格で表示しております)</span></p>
+        <div class="plice1">
+        <p class="plice-in">
+            海老のチリソース煮込み　　　　　　　1,620円<br>
+            小海老のチリソース煮込み　　　　　　　972円<br>
+            甘酢ソースの肉団子　　　　　　　　　　756円<br>
+            特製黒酢のスブタ　　　　　　　　　　1,058円<br>
+            牛肉とピーマンの炒め物　　　　　　　1,058円<br>
+            鶏モモ肉の揚げ物　香味ソース　　　　　918円<br>
+            鶏モモ肉と野菜のピリ辛炒め　　　　　1,058円<br>
+            鶏胸肉の揚げ物　黒酢ソース　　　　　　864円<br>
+            鶏胸肉の揚げ物　レモンソース　　　　　864円<br>
+            鶏手羽先の揚げ炒め　ゴマ風味　　　　　993円<br>
+            魚の揚げ物　香味ソース　　　　　　　1,058円<br>
+            魚と野菜のトウチ炒め　　　　　　　　1,058円<br>
+            マーボー豆腐・ナス(季節限定)　　　　1,058円<br>
+            椎茸の肉詰めと野菜の炒め物　　　　　　993円<br>
+            煎り焼き卵の甘酢ソース　　　　　　　　810円<br>
+            冷凍シュウマイ（１０個）調理＋￥50　　756円<br>
+            冷凍餃子（１０個）調理＋￥50　　　　　756円<br>
+            冷凍水餃子（１０個）白　　　　　　　　637円<br>
+            冷凍水餃子（１０個）赤・緑　　　　　　702円<br>
+            揚げワンタン（１２個）　　　　　　　　648円<br>
+            五目チャーハン　　　　　　　　　　　　993円<br>
+            高菜と肉味噌入りチャーハン　　　　　　993円<br>
+            五目あんかけそば　　　　　　　　　　1,188円<br>
+            五目焼きビーフン　　　　　　　　　　1,058円<br>
+            ゴマ団子（２個より）　　　　　　　162円/１個<br>
+            桃饅頭（２個より）　　　　　　　　291円/１個<br>
+            アンニン豆腐（２個より）　　　　　324円/１個<br>
+            オードブル（４人前）　　　　　　　　　5,940円<br>
+            冷凍点心セット※　　　　　　　　　　　3,218円<br>
+            ※（シュウマイ×１、餃子×２、水餃子×１、水餃子ミックス（赤５・緑５）×１）
+        </p>
+        </div>
+
+        <p class="menu-index">お弁当<br><span>(価格は税込み価格で表示しております)</span></p>
+        <div class="plice2">
+        <p class="plice-in">
+        　　料理（9品）　1,458円　　　　　　　　　　　　　<br>
+            ＜メニュー例＞料理の内容は変更になる場合があります<br>
+            ①海老のチリソース煮込み　　　　　　　　　　　<br>
+            ②三元豚の特製黒酢のスブタ　　　　　　　　　　<br>
+            ③甘酢ソースの肉団子　　　　　　　　　　　　　<br>
+            ④牛肉と細切り野菜のオイスターソース炒め　　　<br>
+            ⑤椎茸の肉詰めトウチ炒め　　　　　　　　　　　<br>
+            ⑥魚の揚げ物　山椒塩　　　　　　　　　　　　　<br>
+            ⑦鶏肉のピリ辛炒め　　　　　　　　　　　　　　<br>
+            ⑧シューマイ　　　　　　　　　　　　　　　　　<br>
+            ⑨ハスの実餡入りごま団子　　　　　　　　　　　<br>
+            白ご飯　　　　 　　216円　　　　　　　　　　　<br>
+            アンニン豆腐　　　 324円　　　　　　　　　　　<br>
+            お弁当は一日限定30個とさせていただきます。前日までの御予約をお願い致します。<br>
+        </p>
+      </div>
+      </div>
+      
+
+      <footer>
+          <div class="wrapper">
+            <p><small>&copy;2021 Hayashi</small></p>
+          </div>
+      </footer>
+       
+    </body>
